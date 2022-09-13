@@ -5,6 +5,7 @@ import UilReact from '@iconscout/react-unicons/icons/uil-react';
 import TopButtons from './TopButtons';
 import Inputs from './Inputs';
 import TimeAndLocation from './TimeAndLocation';
+import TemperatureAndDetails from './TemperatureAndDetails';
 
 // Creating the App component
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
             <Inputs />
             
             <TimeAndLocation />
+            <TemperatureAndDetails />
         </div>
     )
 };
