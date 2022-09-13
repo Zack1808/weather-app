@@ -6,6 +6,7 @@ import TopButtons from './TopButtons';
 import Inputs from './Inputs';
 import TimeAndLocation from './TimeAndLocation';
 import TemperatureAndDetails from './TemperatureAndDetails';
+import Forecast from './Forecast';
 
 // Creating the App component
 const App = () => {
@@ -16,6 +17,8 @@ const App = () => {
             
             <TimeAndLocation />
             <TemperatureAndDetails />
+            <Forecast title="Hourly Forecast" />
+            <Forecast title="Daily Forecast" />
         </div>
     )
 };
