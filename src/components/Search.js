@@ -8,7 +8,7 @@ import '../css/Search.css';
 const Search = () => {
     return (
         <div className="search">
-            <UilSearch className="icon" />
+            <button className='icon'><UilSearch/></button>
             <input type="text" placeholder='Search for cities...' />
         </div>
     )

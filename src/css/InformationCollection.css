@@ -1,0 +1,33 @@
+.information-collection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 700;
+}
+
+.location-units {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+}
+
+.location-units .icon {
+    padding: 5px 10px;
+    background: none;
+    color: #fff !important;
+    border: none;
+    transition: transform .3s;
+}
+
+.location-units .icon:hover {
+    transform: scale(1.2)
+}
+
+.units {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    font-size: calc(.6em + 1vw);
+}

@@ -2,7 +2,7 @@ import React from 'react';
 
 // Importing costume made components
 import Header from './Header';
-import Search from './Search'
+import InformationCollection from './InformationCollection';
 
 // Importing the style file
 import '../css/App.css';
@@ -13,9 +13,7 @@ const App = () => {
         <div className='container'>
             <div className="display-weather">
                 <Header />
-                <div className="information-collection">
-                    <Search />
-                </div>
+                <InformationCollection />
             </div>
         </div>
     )
