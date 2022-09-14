@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './Header';
 import InformationCollection from './InformationCollection';
 import Details from './Details';
+import WeatherInfo from './WeatherInfo';
 
 // Importing the style file
 import '../css/App.css';
@@ -16,6 +17,7 @@ const App = () => {
                 <Header />
                 <InformationCollection />
                 <Details />
+                <WeatherInfo />
             </div>
         </div>
     )
