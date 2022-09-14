@@ -1,0 +1,21 @@
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+
+.date-time-info {
+    font-size: calc(.6em + .6vw);
+    color: #fff;
+    font-weight: 500;
+    padding: 15px 0;
+}
+
+.city-country-info {
+    font-size: calc(.6em + 1vw);
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 0;
+}
