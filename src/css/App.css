@@ -19,7 +19,15 @@
 .display-weather{
     width: 90%;
     max-width: 700px;
+    padding: 20px 0;
     background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
     border-radius: 10px;
     box-shadow: 10px 10px 100px rgb(88, 88, 88);
+}
+
+.information-collection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 700;
 }
