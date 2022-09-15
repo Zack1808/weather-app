@@ -4,20 +4,26 @@ import { UilTemperature, UilTear, UilWind } from '@iconscout/react-unicons';
 // Improting the style file
 import '../css/WeatherInfo.css'
 
+// Importing helper functions
+import { iconUrlFormater } from '../api/fetchWeather';
+
 // Creating the WeatherInfo component
-const WeatherInfo = () => {
+const WeatherInfo = ({ weather: {details, icon, temp, feels_like, humidity, speed}}) => {
     return (
-        <div className='weather-info'>
-            <div className="icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/169/169367.png" alt="" />
-            </div>
-            <div className="temperature">
-                34°
-            </div>
-            <div className="additional-info">
-                <p><UilTemperature /> Real feel: 32°</p>
-                <p><UilTear /> Humidity: 30%</p>
-                <p><UilWind /> Wind: 32km/h</p>
+        <div className="info">
+            <div className="status">{details}</div>
+            <div className='weather-info'>
+                <div className="icon">
+                    <img src={iconUrlFormater(icon)} alt="" />
+                </div>
+                <div className="temperature">
+                    {temp.toFixed()}°
+                </div>
+                <div className="additional-info">
+                    <p><UilTemperature /> Real feel: {feels_like.toFixed()}°</p>
+                    <p><UilTear /> Humidity: {humidity.toFixed()}%</p>
+                    <p><UilWind /> Wind: {speed.toFixed()}km/h</p>
+                </div>
             </div>
         </div>
     )

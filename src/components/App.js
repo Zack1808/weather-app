@@ -16,7 +16,7 @@ import fetchWeather from '../api/fetchWeather';
 // Creating the App component
 const App = () => {
 
-    const [query, setQuery] = useState({q: "zagreb"});
+    const [query, setQuery] = useState({q: "Velika Gorica"});
     const [units, setUnits] = useState({units: "metric"});
     const [weather, setWeather] = useState(null);
 
@@ -27,7 +27,7 @@ const App = () => {
     // Fetching the weather information
     const fetch = async(query) => {
         const weatherInfo = await fetchWeather({...query, ...units});
-        setWeather(weatherInfo)
+        setWeather(weatherInfo);
     }
 
     return (
@@ -39,9 +39,9 @@ const App = () => {
                     weather ? 
                     (
                         <>
-                            <Details />
-                            <WeatherInfo />
-                            <Footer />
+                            <Details weather={weather} />
+                            <WeatherInfo weather={weather} />
+                            <Footer weather={weather} />
                         </>
                     ) 
                     : 

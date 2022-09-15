@@ -3,15 +3,18 @@ import React from 'react';
 // importing the style file
 import '../css/Details.css';
 
+// Importing helpers
+import { fomrmatToLocalTime } from '../api/fetchWeather';
+
 // Creating the Details component
-const Details = () => {
+const Details = ({ weather: {dt, name, country} }) => {
     return (
         <div className='details'>
             <div className='date-time-info'>
-                Wednesday, 14 September 2022 | Current time: 08:41 PM
+                {fomrmatToLocalTime(dt)}
             </div>
             <div className="city-country-info">
-                Berlin, DE
+                {name}, {country}
             </div>
         </div>
     )

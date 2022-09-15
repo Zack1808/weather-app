@@ -3,15 +3,16 @@ import { UilSunset, UilSun} from "@iconscout/react-unicons"
 
 // Importing the style file
 import '../css/Footer.css';
+import { fomrmatToLocalTime } from '../api/fetchWeather';
 
 // Creating the Footer component
-const Footer = () => {
+const Footer = ({ weather: {sunrise, sunset, temp_min, temp_max}}) => {
     return (
         <div className='footer'>
-            <p><UilSun /> Sunrise: 06:50 AM </p>|
-            <p><UilSun /> Highest: 38° </p>|
-            <p><UilSun /> Lowest: 25°</p>|
-            <p><UilSunset /> Sunset: 06:50 AM </p>
+            <p><UilSun /> Sunrise: {fomrmatToLocalTime(sunrise, "LT")} </p>|
+            <p><UilSun /> Highest: {temp_max.toFixed()}° </p>|
+            <p><UilSun /> Lowest: {temp_min.toFixed()}°</p>|
+            <p><UilSunset /> Sunset: {fomrmatToLocalTime(sunset, "LT")}</p>
         </div>
     )
 };

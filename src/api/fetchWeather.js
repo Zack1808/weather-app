@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { DateTime } from 'luxon';
+import Moment from 'moment';
 
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather?";
 const API_KEY = "c17ef25a64c46328d53808bfb5c912ac";
@@ -7,12 +7,13 @@ const API_KEY = "c17ef25a64c46328d53808bfb5c912ac";
 // Funciton that will return just the data we need for the app
 const formatWeatherData = (data) => {
     const {
-        main: {temp, feels_like, temp_min, temp_max},
+        main: {temp, feels_like, temp_min, temp_max, humidity},
         name, 
         dt,
         sys: {country, sunrise, sunset},
         weather,
-        wind: {speed}
+        wind: {speed},
+        timezone
     } = data;
 
     const {
@@ -20,12 +21,13 @@ const formatWeatherData = (data) => {
         icon
     } = weather[0]
 
-    return {temp, feels_like, temp_min, temp_max, name, dt, country, sunrise, sunset, details, icon, speed};
+    return {temp, feels_like, temp_min, temp_max, humidity, name, dt, country, sunrise, sunset, details, icon, speed, timezone};
 }
 
 // Function that will turn the time received from the API into local time for display
-export const fomrmatToLocalTime = (seconds, zone, format = "cccc, dd LLL yyyy' | Local time:' hh:mm a") => {
-    return DateTime.fromSeconds(seconds).setZone(zone).toFormat(format);
+export const fomrmatToLocalTime = (seconds, format = "dddd, Do MMM YYYY | LT") => {
+    const date = new Date(seconds * 1000);
+    return Moment(date).format(format);
 }
 
 // Function that will create the icon link
