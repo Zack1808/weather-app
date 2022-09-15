@@ -5,6 +5,7 @@ import Header from './Header';
 import InformationCollection from './InformationCollection';
 import Details from './Details';
 import WeatherInfo from './WeatherInfo';
+import Footer from './Footer'
 
 // Importing the style file
 import '../css/App.css';
@@ -18,6 +19,7 @@ const App = () => {
                 <InformationCollection />
                 <Details />
                 <WeatherInfo />
+                <Footer />
             </div>
         </div>
     )
