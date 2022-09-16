@@ -6,6 +6,7 @@ import InformationCollection from './InformationCollection';
 import Details from './Details';
 import WeatherInfo from './WeatherInfo';
 import Footer from './Footer'
+import Loader  from './Loader';
 
 // Importing the style file
 import '../css/App.css';
@@ -53,7 +54,7 @@ const App = () => {
                     ) 
                     : 
                     (
-                    <div>Wait</div>
+                        <Loader />
                     )
                 }
             </div>
