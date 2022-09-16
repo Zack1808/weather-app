@@ -33,7 +33,7 @@ const App = () => {
     return (
         <div className='container'>
             <div className="display-weather">
-                <Header />
+                <Header setQuery={setQuery} />
                 <InformationCollection />
                 {
                     weather ? 

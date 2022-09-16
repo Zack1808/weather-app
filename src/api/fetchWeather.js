@@ -24,17 +24,6 @@ const formatWeatherData = (data) => {
     return {temp, feels_like, temp_min, temp_max, humidity, name, dt, country, sunrise, sunset, details, icon, speed, timezone};
 }
 
-// Function that will turn the time received from the API into local time for display
-export const fomrmatToLocalTime = (seconds, format = "dddd, Do MMM YYYY | LT") => {
-    const date = new Date(seconds * 1000);
-    return Moment(date).format(format);
-}
-
-// Function that will create the icon link
-export const iconUrlFormater = (ic) => {
-    return `http://openweathermap.org/img/wn/${ic}@2x.png`
-}
-
 // Function that will fetch the weather information for a specific region
 const fetchWeather = async(searchParams) => {
     const params = {...searchParams, appid: API_KEY};

@@ -4,7 +4,7 @@ import React from 'react';
 import '../css/Details.css';
 
 // Importing helpers
-import { fomrmatToLocalTime } from '../api/fetchWeather';
+import { fomrmatToLocalTime } from '../helpers/formaters';
 
 // Creating the Details component
 const Details = ({ weather: {dt, name, country} }) => {

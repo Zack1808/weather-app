@@ -5,7 +5,7 @@ import { UilTemperature, UilTear, UilWind } from '@iconscout/react-unicons';
 import '../css/WeatherInfo.css'
 
 // Importing helper functions
-import { iconUrlFormater } from '../api/fetchWeather';
+import { iconUrlFormater } from '../helpers/formaters';
 
 // Creating the WeatherInfo component
 const WeatherInfo = ({ weather: {details, icon, temp, feels_like, humidity, speed}}) => {
