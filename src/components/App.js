@@ -13,12 +13,19 @@ import '../css/App.css';
 // Importing the api
 import fetchWeather from '../api/fetchWeather';
 
+// Importing helper functions
+import { fetchLocation } from '../helpers/formaters'
+
 // Creating the App component
 const App = () => {
 
     const [query, setQuery] = useState({q: "Velika Gorica"});
     const [units, setUnits] = useState({units: "metric"});
     const [weather, setWeather] = useState(null);
+
+    useEffect(() => {
+        fetchLocation(setQuery)
+    }, [])
 
     useEffect(() => {
         fetch(query)

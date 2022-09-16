@@ -9,9 +9,14 @@ const Search = ({ setQuery }) => {
 
     const [search, setSearch] = useState("");
 
+    const handleClick = () => {
+        setQuery({q: search});
+        setSearch("")
+    }
+
     return (
         <div className="search">
-            <button className='icon' onClick={() => setQuery({ q: search })}><UilSearch/></button>
+            <button className='icon' onClick={handleClick}><UilSearch/></button>
             <input value={search} onChange={e => setSearch(e.target.value) } type="text" placeholder='Search for cities...' />
         </div>
     )

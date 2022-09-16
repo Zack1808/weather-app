@@ -11,3 +11,10 @@ export const fomrmatToLocalTime = (seconds, timezone, format = "dddd, Do MMM YYY
 export const iconUrlFormater = (ic) => {
     return `http://openweathermap.org/img/wn/${ic}@2x.png`
 }
+
+// Function that will get the lat and lon of the users position
+export const fetchLocation = (setQuery) => {
+    return navigator.geolocation.getCurrentPosition(pos => {
+        setQuery({ lat: pos.coords.latitude, lon: pos.coords.longitude})
+    })
+}
