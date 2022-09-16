@@ -15,10 +15,10 @@ const InformationCollection = ({ setQuery, setUnits }) => {
             <div className="location-units">
                 <button className='icon'><UilLocationPinAlt  /></button>
                 <div className="units">
-                <button className='icon celcius' onClick={() => setUnits({ units: "metric"})}>
+                <button className='icon' onClick={() => setUnits({ units: "metric"})}>
                     <UilCelsius />
                 </button>
-                <button className="icon farenheit" onClick={() => setUnits({ units: "imperial"})}>
+                <button className="icon" onClick={() => setUnits({ units: "imperial"})}>
                     <UilFahrenheit />
                 </button>
                 </div>

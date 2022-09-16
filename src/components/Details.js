@@ -7,11 +7,11 @@ import '../css/Details.css';
 import { fomrmatToLocalTime } from '../helpers/formaters';
 
 // Creating the Details component
-const Details = ({ weather: {dt, name, country} }) => {
+const Details = ({ weather: {dt, timezone, name, country} }) => {
     return (
         <div className='details'>
             <div className='date-time-info'>
-                {fomrmatToLocalTime(dt)}
+                {fomrmatToLocalTime(dt, timezone)}
             </div>
             <div className="city-country-info">
                 {name}, {country}
