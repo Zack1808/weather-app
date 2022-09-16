@@ -8,17 +8,17 @@ import Search from './Search';
 import "../css/InformationCollection.css"
 
 // Creating the InformationCollection component
-const InformationCollection = ({ setQuery }) => {
+const InformationCollection = ({ setQuery, setUnits }) => {
     return (
         <div className="information-collection">
             <Search setQuery={setQuery} />
             <div className="location-units">
                 <button className='icon'><UilLocationPinAlt  /></button>
                 <div className="units">
-                <button className='icon celcius'>
+                <button className='icon celcius' onClick={() => setUnits({ units: "metric"})}>
                     <UilCelsius />
                 </button>
-                <button className="icon farenheit">
+                <button className="icon farenheit" onClick={() => setUnits({ units: "imperial"})}>
                     <UilFahrenheit />
                 </button>
                 </div>
