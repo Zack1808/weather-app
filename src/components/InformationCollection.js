@@ -8,10 +8,10 @@ import Search from './Search';
 import "../css/InformationCollection.css"
 
 // Creating the InformationCollection component
-const InformationCollection = () => {
+const InformationCollection = ({ setQuery }) => {
     return (
         <div className="information-collection">
-            <Search />
+            <Search setQuery={setQuery} />
             <div className="location-units">
                 <button className='icon'><UilLocationPinAlt  /></button>
                 <div className="units">

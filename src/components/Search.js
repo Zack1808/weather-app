@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { UilSearch } from '@iconscout/react-unicons';
 
 // Importing the style file
 import '../css/Search.css';
 
 // Creating the search component
-const Search = () => {
+const Search = ({ setQuery }) => {
+
+    const [search, setSearch] = useState("");
+
     return (
         <div className="search">
-            <button className='icon'><UilSearch/></button>
-            <input type="text" placeholder='Search for cities...' />
+            <button className='icon' onClick={() => setQuery({ q: search })}><UilSearch/></button>
+            <input value={search} onChange={e => setSearch(e.target.value) } type="text" placeholder='Search for cities...' />
         </div>
     )
 };
