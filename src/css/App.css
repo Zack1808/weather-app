@@ -13,14 +13,57 @@
     width: 100vw;
     justify-content: center;
     align-items: center;
+}
+
+ .clear-cold {
     background: linear-gradient(to bottom, #8eb4d5, #fffde4);
+}
+
+.clear {
+    background: linear-gradient(to top, #ACBB78, #F7F8F8);
+}
+
+.clear-hot {
+   background: linear-gradient(to bottom, #FFFFFF, #FFEFBA);
+}
+
+.rain, .snow {
+    background: linear-gradient(to bottom, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+}
+
+.night {
+    background: linear-gradient(to bottom, #495880, #015e90, #015e90, #495880);    
 }
 
 .display-weather{
     width: 95%;
     max-width: 700px;
     padding: 20px 0;
-    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
     border-radius: 10px;
     box-shadow: 10px 10px 100px rgb(88, 88, 88);
+}
+
+.clear-cold .display-weather {
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+}
+
+.clear .display-weather {
+    background: linear-gradient(to top, #b3b398, #215f00);
+}
+
+.clear-hot .display-weather {
+    background: linear-gradient(to bottom, #f8b500, #d3c49f);
+}
+
+.rain .display-weather {
+    background: linear-gradient(to bottom, #636d75, #969899);
+}
+
+.show .display-weather {
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); 
+    color: #000 !important;
+}
+
+.night .display-weather {
+    background: linear-gradient(to bottom, #2e5eaa, #373B44);
 }

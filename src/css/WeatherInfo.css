@@ -51,3 +51,9 @@
     font-size: calc(.6em + .5vw);
     font-weight: 500;
 }
+
+.snow .info .status,
+.snow .weather-info .temperature,
+.snow .weather-info .additional-info {
+    color: #000 !important;
+}

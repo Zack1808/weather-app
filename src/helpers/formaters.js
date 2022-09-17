@@ -18,3 +18,21 @@ export const fetchLocation = (setQuery) => {
         setQuery({ lat: pos.coords.latitude, lon: pos.coords.longitude})
     })
 }
+
+// Function that will return the correct classname according to the weather status and temp
+export const changeBg = (weather, units) => {
+    if(!weather) return "clear";
+    const thresholdCold = units.units == "metric" ? 10 : 50;
+    const thresholdNormal = units.units === "metric" ? 20 : 68;
+    const rain = ['rain', 'thunderstorm', 'shower rain',];
+    const clear = ['clear sky', 'few clouds', 'scattered couds', 'broken clouds', 'clear', 'clouds'];
+    const snow = ['snow', 'mist'];
+    if((weather.dt > weather.sunset) || (weather.dt < weather.sunrise)) return "night"
+    if(rain.includes(weather.details.toLowerCase())) return "rain";
+    if(clear.includes(weather.details.toLowerCase())) {
+        if(weather.temp.toFixed() < thresholdCold) return "clear-cold";
+        if(weather.temp.toFixed() < thresholdNormal) return "clear"
+        return "clear-hot";
+    }
+    if(snow.includes[weather.details.toLowerCase()]) return "snow"
+}

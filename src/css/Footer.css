@@ -13,3 +13,7 @@
     align-items: center;
     font-size: calc(.5em + .5vw) !important;
 }
+
+.snow .footer {
+    color: #000 !important;
+}

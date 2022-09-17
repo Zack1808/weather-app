@@ -19,3 +19,7 @@
     transform: scale(1.07);
     cursor: pointer;
 }
+
+.snow .header button {
+    color: #000;
+}

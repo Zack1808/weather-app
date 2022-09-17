@@ -19,3 +19,8 @@
     font-weight: 700;
     padding: 10px 0;
 }
+
+.snow .date-time-info,
+.snow .city-country-info {
+    color: #000;
+}

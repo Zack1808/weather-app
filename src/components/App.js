@@ -16,6 +16,7 @@ import fetchWeather from '../api/fetchWeather';
 
 // Importing helper functions
 import { fetchLocation } from '../helpers/formaters'
+import { changeBg } from '../helpers/formaters';
 
 // Creating the App component
 const App = () => {
@@ -39,7 +40,7 @@ const App = () => {
     }
 
     return (
-        <div className='container'>
+        <div className={`container ${changeBg(weather, units)}`}>
             <div className="display-weather">
                 <Header setQuery={setQuery} />
                 <InformationCollection setQuery={setQuery} setUnits={setUnits} />
