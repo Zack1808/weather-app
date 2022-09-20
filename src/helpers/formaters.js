@@ -24,9 +24,9 @@ export const changeBg = (weather, units) => {
     if(!weather) return "clear";
     const thresholdCold = units.units == "metric" ? 10 : 50;
     const thresholdNormal = units.units === "metric" ? 20 : 68;
-    const rain = ['rain', 'thunderstorm', 'shower rain',];
-    const clear = ['clear sky', 'few clouds', 'scattered couds', 'broken clouds', 'clear', 'clouds'];
-    const snow = ['snow', 'mist'];
+    const rain = ['rain', 'thunderstorm', 'drizzle', 'tornado'];
+    const clear = ['clear', 'clouds'];
+    const snow = ['snow', 'mist','smoke', 'haze', 'dust', 'fog', 'sand', 'ash', 'squall',];
     if((weather.dt > weather.sunset) || (weather.dt < weather.sunrise)) return "night"
     if(rain.includes(weather.details.toLowerCase())) return "rain";
     if(clear.includes(weather.details.toLowerCase())) {

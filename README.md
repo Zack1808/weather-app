@@ -22,4 +22,4 @@ After the exectuion of the command is completed, run the followig command:
 
 ### `npm start`
 
-After execution, the localhost server will startup and a browser window will open, previewing the stopwatch app.
+After execution, the localhost server will startup and a browser window will open, previewing the weather app.
