@@ -2,6 +2,7 @@ import React from "react";
 
 // Importing the costume components
 import NavBar from "./NavBar";
+import Search from "./Search";
 
 // Importing the style file
 import "../css/App.css";
@@ -12,6 +13,9 @@ const App = () => {
     <div className="app-container">
       <div className="navigation">
         <NavBar />
+        <div className="search">
+          <Search />
+        </div>
       </div>
     </div>
   );

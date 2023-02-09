@@ -7,6 +7,10 @@
   font-family: "Merriweather Sans", sans-serif;
 }
 
+:root {
+  --light: #fff;
+}
+
 .app-container {
   min-height: 100vh;
   display: flex;
@@ -17,6 +21,12 @@
 
 .navigation {
   display: flex;
+  width: 100%;
+  padding: 10px;
   justify-content: space-between;
   align-items: center;
+}
+
+.search {
+  width: 50%;
 }
