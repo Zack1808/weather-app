@@ -1,0 +1,20 @@
+.nav-container {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  justify-content: start;
+  align-items: center;
+}
+
+.nav-container button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
+  user-select: none;
+}
+
+.nav-container button:hover {
+  transform: scale(1.05);
+}
