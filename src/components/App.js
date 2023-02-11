@@ -11,6 +11,10 @@ const App = () => {
   return (
     <div className="app-container">
       <Header />
+      <div className="description">
+        <h1>Britanski Trg</h1>
+        <small>Saturday, 11th February 2023 | 9:35AM</small>
+      </div>
     </div>
   );
 };
