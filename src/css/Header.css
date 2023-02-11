@@ -1,0 +1,38 @@
+.navigation {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+  transition: 0.2s ease-in-out;
+  border-radius: 5px;
+}
+
+@media (max-width: 760px) {
+  .navigation {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+} ;

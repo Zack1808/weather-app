@@ -1,22 +1,16 @@
-import React from "react";
-
-// Importing the costume components
-import NavBar from "./NavBar";
-import Search from "./Search";
+import React, { useState } from "react";
 
 // Importing the style file
 import "../css/App.css";
+
+// Importing costume components
+import Header from "./Header";
 
 // Creating the App component
 const App = () => {
   return (
     <div className="app-container">
-      <div className="navigation">
-        <NavBar />
-        <div className="search">
-          <Search />
-        </div>
-      </div>
+      <Header />
     </div>
   );
 };

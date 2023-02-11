@@ -27,3 +27,9 @@ form button {
   border: none;
   padding: 5px;
 }
+
+@media (max-width: 760px) {
+  form {
+    width: 100%;
+  }
+}
