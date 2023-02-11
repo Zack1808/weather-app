@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  gap: 30px;
+  gap: 100px;
 }
 
 .temperature-info {
@@ -31,8 +31,35 @@
   align-self: flex-end;
 }
 
+.weather-info {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather,
+.temp-day {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.weather span,
+.temp-day span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 @media (max-width: 760px) {
   .weather-container {
     flex-direction: column;
+    gap: 30px;
+  }
+
+  .weather-info {
+    width: 100%;
+    gap: 50px;
   }
 }
