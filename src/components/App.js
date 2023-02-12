@@ -39,7 +39,7 @@ const App = () => {
   if (weather)
     return (
       <div className="app-container">
-        <Header />
+        <Header units={setUnits} query={setQuery} />
         <div className="description">
           <h1>
             {weather.name}, {weather.country}
