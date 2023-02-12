@@ -22,6 +22,11 @@
   justify-content: space-between;
   align-items: center;
   text-transform: capitalize;
+  color: white;
+}
+
+.snow .image {
+  color: black;
 }
 
 .temperature-info img {
@@ -31,6 +36,11 @@
 .temp {
   font-size: clamp(3em, 50vw, 10em);
   align-self: flex-end;
+  color: white;
+}
+
+.snow .temp {
+  color: black;
 }
 
 .weather-info {
@@ -38,6 +48,11 @@
   gap: 100px;
   justify-content: center;
   align-items: center;
+  color: white;
+}
+
+.snow .weather-info {
+  color: black;
 }
 
 .weather,
@@ -58,6 +73,10 @@
   .weather-container {
     flex-direction: column;
     gap: 30px;
+  }
+
+  .temp {
+    align-self: center;
   }
 
   .weather-info {

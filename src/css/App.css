@@ -27,6 +27,35 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  color: white;
+}
+
+.snow .description {
+  color: black;
+}
+
+.night {
+  background: radial-gradient(#2e5eaa, #373b44);
+}
+
+.rain {
+  background: radial-gradient(#636d75, #969899);
+}
+
+.snow {
+  background: radial-gradient(#ffffff, #ece9e6);
+}
+
+.clear-hot {
+  background: radial-gradient(#f8b500, #d3c49f);
+}
+
+.clear {
+  background: radial-gradient(#b3b398, #215f00);
+}
+
+.clear-cold {
+  background: radial-gradient(#667db6, #0082c8, #0082c8, #667db6);
 }
 
 @media (max-width: 760px) {

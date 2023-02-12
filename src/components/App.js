@@ -6,12 +6,17 @@ import "../css/App.css";
 // Importing costume components
 import Header from "./Header";
 import WeatherInfo from "./WeatherInfo";
+import Footer from "./Footer";
 
 // Importing the fetch functions
 import fetchWeather from "../api/fetchWeather";
 
 // Importing the helper functions
-import { fetchLocation, fomrmatToLocalTime } from "../helpers/formaters";
+import {
+  fetchLocation,
+  fomrmatToLocalTime,
+  changeBg,
+} from "../helpers/formaters";
 
 // Creating the App component
 const App = () => {
@@ -38,7 +43,7 @@ const App = () => {
 
   if (weather)
     return (
-      <div className="app-container">
+      <div className={`app-container ${changeBg(weather, units)}`}>
         <Header units={setUnits} query={setQuery} />
         <div className="description">
           <h1>
@@ -47,6 +52,7 @@ const App = () => {
           <small>{fomrmatToLocalTime(weather.dt, weather.timezone)}</small>
         </div>
         <WeatherInfo info={weather} />
+        <Footer />
       </div>
     );
 };

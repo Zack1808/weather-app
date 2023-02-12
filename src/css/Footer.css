@@ -1,0 +1,13 @@
+.footer {
+  margin-top: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+
+.snow .footer {
+  color: black;
+}
