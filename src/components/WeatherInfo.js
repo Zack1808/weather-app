@@ -12,41 +12,46 @@ import {
 // Importing the style file
 import "../css/WeatherInfo.css";
 
+// Importing the helper functions
+import { fomrmatToLocalTime } from "../helpers/formaters";
+
 // Creating the WeatherInfo component
-const WeatherInfo = () => {
+const WeatherInfo = ({ info }) => {
   return (
     <div className="weather-container">
       <div className="temperature-info">
         <div className="image">
           <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="" />
-          <h2>Clear</h2>
+          <h2>{info.details}</h2>
         </div>
-        <div className="temp">4°</div>
+        <div className="temp">{Math.round(info.temp)}°</div>
       </div>
       <div className="weather-info">
         <div className="weather">
           <span>
-            <UilTemperature /> Real feel: 1°
+            <UilTemperature /> Real feel: {Math.round(info.feels_like)}°
           </span>
           <span>
-            <UilTear /> Humidity: 64%
+            <UilTear /> Humidity: {info.humidity}%
           </span>
           <span>
-            <UilWind /> Wind: 1km/h
+            <UilWind /> Wind: {info.speed}km/h
           </span>
         </div>
         <div className="temp-day">
           <span>
-            <UilSun /> Sunrise: 7:05AM
+            <UilSun /> Sunrise:{" "}
+            {fomrmatToLocalTime(info.sunrise, info.timezone, "LT")}
           </span>
           <span>
-            <UilTemperatureMinus /> Lowest: -2°
+            <UilTemperatureMinus /> Lowest: {Math.round(info.temp_min)}°
           </span>
           <span>
-            <UilTemperaturePlus /> Highest: 1°
+            <UilTemperaturePlus /> Highest: {Math.round(info.temp_max)}°
           </span>
           <span>
-            <UilSunset /> Sunset: 5:15PM
+            <UilSunset /> Sunset:{" "}
+            {fomrmatToLocalTime(info.sunset, info.timezone, "LT")}
           </span>
         </div>
       </div>

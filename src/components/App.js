@@ -10,18 +10,46 @@ import WeatherInfo from "./WeatherInfo";
 // Importing the fetch functions
 import fetchWeather from "../api/fetchWeather";
 
+// Importing the helper functions
+import { fetchLocation, fomrmatToLocalTime } from "../helpers/formaters";
+
 // Creating the App component
 const App = () => {
-  return (
-    <div className="app-container">
-      <Header />
-      <div className="description">
-        <h1>Britanski Trg</h1>
-        <small>Saturday, 11th February 2023 | 9:35AM</small>
+  // Setting up state
+  const [query, setQuery] = useState({ g: "Velika Gorica" });
+  const [units, setUnits] = useState({ units: "metric" });
+  const [weather, setWeather] = useState(null);
+
+  //   Getting the user location
+  useEffect(() => {
+    fetchLocation(setQuery);
+  }, []);
+
+  //   Fetching the weather
+  useEffect(() => {
+    fetch();
+  }, [query, units]);
+
+  //   Creating function that will fetch the weather according to the location
+  const fetch = async () => {
+    const weatherInfo = await fetchWeather({ ...query, ...units });
+    setWeather(weatherInfo);
+  };
+
+  if (weather)
+    return (
+      <div className="app-container">
+        <Header />
+        <div className="description">
+          <h1>
+            {weather.name}, {weather.country}
+          </h1>
+          <small>{fomrmatToLocalTime(weather.dt, weather.timezone)}</small>
+        </div>
+        <WeatherInfo info={weather} />
+        {console.log(weather)}
       </div>
-      <WeatherInfo />
-    </div>
-  );
+    );
 };
 
 // Exporting the App component
