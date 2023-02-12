@@ -32,7 +32,7 @@ const Header = ({ units, query }) => {
 
   return (
     <div className="navigation">
-      <Search />
+      <Search query={query} />
       <div className="buttons">
         <button className="location" onClick={() => fetchLocation(query)}>
           Get <UilTemperature /> for current <UilLocationPinAlt />
