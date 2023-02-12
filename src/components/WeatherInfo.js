@@ -13,7 +13,7 @@ import {
 import "../css/WeatherInfo.css";
 
 // Importing the helper functions
-import { fomrmatToLocalTime } from "../helpers/formaters";
+import { fomrmatToLocalTime, iconUrlFormater } from "../helpers/formaters";
 
 // Creating the WeatherInfo component
 const WeatherInfo = ({ info }) => {
@@ -21,8 +21,8 @@ const WeatherInfo = ({ info }) => {
     <div className="weather-container">
       <div className="temperature-info">
         <div className="image">
-          <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="" />
-          <h2>{info.details}</h2>
+          <img src={iconUrlFormater(info.icon)} alt="" />
+          <h2>{info.description}</h2>
         </div>
         <div className="temp">{Math.round(info.temp)}°</div>
       </div>

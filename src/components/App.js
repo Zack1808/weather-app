@@ -16,7 +16,7 @@ import { fetchLocation, fomrmatToLocalTime } from "../helpers/formaters";
 // Creating the App component
 const App = () => {
   // Setting up state
-  const [query, setQuery] = useState({ g: "Velika Gorica" });
+  const [query, setQuery] = useState({ q: "Velika Gorica" });
   const [units, setUnits] = useState({ units: "metric" });
   const [weather, setWeather] = useState(null);
 
@@ -47,7 +47,6 @@ const App = () => {
           <small>{fomrmatToLocalTime(weather.dt, weather.timezone)}</small>
         </div>
         <WeatherInfo info={weather} />
-        {console.log(weather)}
       </div>
     );
 };
