@@ -1,8 +1,7 @@
 import axios from "axios";
-import Moment from "moment";
+import { API_KEY } from "../data/data";
 
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather?";
-const API_KEY = "c17ef25a64c46328d53808bfb5c912ac";
 
 // Funciton that will return just the data we need for the app
 const formatWeatherData = (data) => {
