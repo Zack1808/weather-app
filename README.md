@@ -1,25 +1,63 @@
-# Weather  App
+# Weather App
 
-## About the app
+<p align="center"><img src="./public/weather_preview.png" alt="Preview of the Weather app" /></p>
 
-This is a simple weather app that will show the current weather for the selected city or your current location. 
-The user is able to enter the name of the city for which he wants to check the weather, select if the temperature should be displayed in celcius or fahrenheit and show the weather of the users current location.
-For getting the weather information the [openweathermap API](https://openweathermap.org). 
-The background colors also change accordingly, depending on what type of weather the selected city has and, in case the the weather is clear, according on if it is hot or cold.
-The app is mobile compatible (responsive).
-The app was published at [github pages](https://zack1808.github.io/weather-app/).
+## Description
 
-## How to run the app
+This is a React based Weather app using the [openweathermap API](https://openweathermap.org). The app allows the user to check the current weather conditions and forecast for any location worldwide. It's a handy tool designed to keep the user informed about the weather so they can plan their activities accordingly.
 
-You can find the app up and running at [https://zack1808.github.io/weather-app/](https://zack1808.github.io/weather-app/).
+## Features
 
-If you want to run the app localy, you can clone the repository. 
-After cloning and entering the repository, run the command:
+- Real-time weather information: Get the current temperature, weather conditions, humidity, wind speed, and more.
+- Search by location: Enter the name of any city or location to get weather data for that area.
+- Conversion from celsius to fahrenheit and vice versa
+- Responsive design: Access the app on various devices, including desktops, tablets, and smartphones.
 
-### `npm install`
+## Live demo
 
-After the exectuion of the command is completed, run the followig command:
+You can try out the Weather App by visiting the [live demo](https://weather-app-jpn.netlify.app)
 
-### `npm start`
+## How to run the app locally
+
+If you want to run the app localy:
+
+#### 1. Clone the repository
+
+- HTTPS: `git clone https://github.com/Zack1808/weather-app.git`
+- SSH: `git clone git@github.com:Zack1808/weather-app.git`
+- GitHub CLI: `gh repo clone Zack1808/weather-app`
+
+#### 2. Enter the project directory
+
+`cd weather-app`
+
+#### 3. Allow the app to install the necessary packages (Node.js has to be installed on the device)
+
+`npm install`
+
+#### 4. Settup the API key
+
+Within the project directory, create the .env file. In there create the variable REACT_APP_YT_API_KEY
+
+`REACT_APP_OPENAI_API_KEY=yourOpenWeatherMapAPIkey`
+
+#### 5. start the app
+
+`npm`
 
 After execution, the localhost server will startup and a browser window will open, previewing the weather app.
+
+## Contribution
+
+Contributions to the Weather app project are welcome. If you find any issues or want to add new features, feel free to create a pull request. Make sure to follow the project's coding conventions and provide detailed information about your changes.
+
+## Contact
+
+If you have any questions or suggestions, you can reach me via:
+
+- Mail: jeanpierrenovak23@gmail.com
+- My portfolio: [jeanpierrenovak.netlify.app](https://jeanpierrenovak.netlify.app)
+
+---
+
+Stay weather-ready!

@@ -33,6 +33,8 @@ const App = () => {
   //   Fetching the weather
   useEffect(() => {
     fetch();
+
+    // eslint-disable-next-line
   }, [query, units]);
 
   //   Creating function that will fetch the weather according to the location

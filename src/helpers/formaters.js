@@ -26,7 +26,7 @@ export const fetchLocation = (setQuery) => {
 // Function that will return the correct classname according to the weather status and temp
 export const changeBg = (weather, units) => {
   if (!weather) return "clear";
-  const thresholdCold = units.units == "metric" ? 10 : 50;
+  const thresholdCold = units.units === "metric" ? 10 : 50;
   const thresholdNormal = units.units === "metric" ? 20 : 68;
   const rain = ["rain", "thunderstorm", "drizzle", "tornado"];
   const clear = ["clear", "clouds"];

@@ -1,5 +1,4 @@
 import axios from "axios";
-import { API_KEY } from "../data/data";
 
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather?";
 
@@ -38,7 +37,10 @@ const formatWeatherData = (data) => {
 
 // Function that will fetch the weather information for a specific region
 const fetchWeather = async (searchParams) => {
-  const params = { ...searchParams, appid: API_KEY };
+  const params = {
+    ...searchParams,
+    appid: process.env.REACT_APP_OPENAI_API_KEY,
+  };
   const result = await axios.get(BASE_URL, { params });
   return formatWeatherData(result.data);
 };
