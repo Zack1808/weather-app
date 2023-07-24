@@ -43,7 +43,7 @@ Within the project directory, create the .env file. In there create the variable
 
 #### 5. start the app
 
-`npm`
+`npm start`
 
 After execution, the localhost server will startup and a browser window will open, previewing the weather app.
 
